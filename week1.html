@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 1 - OSI Model Assignment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #6b7280;
+      --color-heading: #111827;
+      --color-primary: #000000;
+      --radius: 0.75rem;
+      --shadow-light: rgba(0,0,0,0.05);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      font-weight: 400;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 3rem auto 4rem auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 0.25rem;
+    }
+    p.lead {
+      font-size: 18px;
+      margin-top: 0;
+      color: var(--color-text);
+      margin-bottom: 3rem;
+      max-width: 700px;
+    }
+    section {
+      background: #fafafa;
+      border-radius: var(--radius);
+      padding: 2.5rem 3rem;
+      box-shadow: 0 2px 8px var(--shadow-light);
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: var(--color-heading);
+      font-weight: 700;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+      font-size: 22px;
+    }
+    ol, ul {
+      padding-left: 1.5rem;
+      color: var(--color-text);
+    }
+    ol > li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    ul > li {
+      margin-bottom: 0.6rem;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f3f4f6;
+      border-radius: 0.3rem;
+      padding: 0.15em 0.4em;
+      font-size: 0.95em;
+      color: #2563eb;
+      user-select: all;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+    footer {
+      max-width: 1200px;
+      margin: 0 auto 2rem auto;
+      padding: 0 2rem;
+      font-size: 0.875rem;
+      color: var(--color-text);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <h1>Week 1 - OSI Model Assignment</h1>
+    <p class="lead">Comprehensive explanation of the OSI Model with detailed descriptions of its 7 layers and their functions.</p>
+
+    <section aria-labelledby="osi-overview">
+      <h2 id="osi-overview">OSI Model Overview</h2>
+      <p>
+        The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a communication system into seven layers. Each layer has a specific networking function and interacts with the layers above and below it, allowing interoperability between different systems and technologies.
+      </p>
+    </section>
+
+    <section aria-labelledby="osi-layers">
+      <h2 id="osi-layers">The 7 Layers of the OSI Model</h2>
+      <ol>
+        <li>
+          <h3>Layer 1: Physical Layer</h3>
+          <p>Responsible for transmitting raw bitstreams over physical mediums such as cables and wireless. It defines hardware specifications, electrical signals, connectors, and data rates.</p>
+          <p><strong>Examples:</strong> Ethernet cables, fiber optics, radio signals.</p>
+        </li>
+        <li>
+          <h3>Layer 2: Data Link Layer</h3>
+          <p>Packages data bits into frames, controls access to the physical medium, manages error detection and correction, and handles flow control.</p>
+          <p>It includes two sublayers: Media Access Control (MAC) and Logical Link Control (LLC).</p>
+          <p><strong>Examples:</strong> PPP, Ethernet, HDLC.</p>
+        </li>
+        <li>
+          <h3>Layer 3: Network Layer</h3>
+          <p>Manages logical addressing and routing data packets between networks to reach the intended destination efficiently.</p>
+          <p><strong>Examples:</strong> IP, ICMP.</p>
+        </li>
+        <li>
+          <h3>Layer 4: Transport Layer</h3>
+          <p>Provides end-to-end communication, segmentation, flow control, and error recovery to ensure reliable data transfer.</p>
+          <p><strong>Examples:</strong> TCP, UDP.</p>
+        </li>
+        <li>
+          <h3>Layer 5: Session Layer</h3>
+          <p>Establishes, manages, and terminates communication sessions between applications, handling synchronization and checkpointing.</p>
+          <p><strong>Examples:</strong> NetBIOS, RPC.</p>
+        </li>
+        <li>
+          <h3>Layer 6: Presentation Layer</h3>
+          <p>Handles data format translation, encryption, decryption, and compression to ensure data is in a usable format.</p>
+          <p><strong>Examples:</strong> JPEG, ASCII, MPEG.</p>
+        </li>
+        <li>
+          <h3>Layer 7: Application Layer</h3>
+          <p>Interfaces with end-user software and provides network services such as email, file transfer, and web browsing.</p>
+          <p><strong>Examples:</strong> HTTP, FTP, SMTP.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="osi-advantages">
+      <h2 id="osi-advantages">Advantages of the OSI Model</h2>
+      <ul>
+        <li>Standardizes networking components and protocols for vendor interoperability.</li>
+        <li>Facilitates troubleshooting by isolating network problems layer-by-layer.</li>
+        <li>Provides a clear conceptual understanding for designing and implementing networks.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="osi-tcpip-comparison">
+      <h2 id="osi-tcpip-comparison">Comparison with TCP/IP Model</h2>
+      <p>
+        The TCP/IP model has four layers and is less granular than the OSI model. The OSI Application, Presentation, and Session layers are combined into the TCP/IP Application layer, and the OSI Physical and Data Link layers are combined into the Network Access layer in TCP/IP.
+      </p>
+      <p>
+        OSI is a prescriptive framework commonly used for educational and conceptual purposes, while TCP/IP is a practical model for real-world Internet communications.
+      </p>
+    </section>
+
+    <section aria-labelledby="conclusion">
+      <h2 id="conclusion">Conclusion</h2>
+      <p>
+        The OSI model remains a fundamental building block to understand networking. Knowing the roles and functions of each layer is critical to designing, troubleshooting, and maintaining communication systems.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Internship Networking Assignment by MADDUSAGARI SUBAHAN
+  </footer>
+</body>
+</html>
+
